@@ -107,7 +107,7 @@ public class Actividad extends Activity {
                     +u2.getNombre());
 
                 }catch(Exception e){
-                    texto.setText("No hay internet, checa la conexion de wi-fi de tu cel o activa el plan de datos");
+                    texto.setText("No hay internet, checa la conexion de wi-fi de tu cel o activa transmisión de datos");
                 }
             }
         }.execute(null,null,null);
