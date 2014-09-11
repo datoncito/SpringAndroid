@@ -1,0 +1,41 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 20
+    buildToolsVersion "20.0.0"
+
+    defaultConfig {
+        applicationId "com.usuario.campitos.springandroid"
+        minSdkVersion 14
+        targetSdkVersion 20
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            runProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    //Excluimos con la siguiente opcion los paquetes proque manda un error de duplicado de archivo asqueroso notice.txt Estas tienen que ir dentro de android{  }
+    packagingOptions {
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/notice.txt'
+    }
+    lintOptions {
+        //
+        abortOnError false
+    }
+}
+
+//Estas dependencias van  fuera, la primera ya la tienes solo agregamos las de rest, spring-android-core y la de json, a guevo putos!!!
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'org.springframework.android:spring-android-rest-template:1.0.1.RELEASE'
+    compile 'org.springframework.android:spring-android-core:1.0.1.RELEASE'
+    compile 'org.codehaus.jackson:jackson-mapper-asl:1.9.11'
+
+}

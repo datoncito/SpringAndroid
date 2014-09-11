@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    tools:context=".Actividad" >
+    <item android:id="@+id/action_search"
+
+        android:title="perro"
+        android:showAsAction="ifRoom" />
+    <!-- Settings, should always be in the overflow -->
+    <item android:id="@+id/action_settings"
+        android:title="gato"
+        android:icon="@drawable/email_open"
+        android:showAsAction="always" />
+    <item android:id="@+id/accion_algo"
+        android:icon="@drawable/mexico"
+         android:title="mexico"
+          android:showAsAction="always"/>
+</menu>
